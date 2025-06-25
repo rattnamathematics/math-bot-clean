@@ -1,0 +1,14 @@
+services:
+- type: worker
+  name: telegram-math-bot
+  env: python
+  repo: https://github.com/rattnamathematics/math-bot-clean
+  branch: main
+  startCommand: bash start.sh
+  envVars:
+    - key: BOT_TOKEN
+      sync: false
+    - key: WOLFRAM_APP_ID
+      sync: false
+    - key: WEBHOOK_URL
+      sync: false
